@@ -63,8 +63,6 @@ class StreamActivity : AppCompatActivity(), VlcListener{
             val url = intent.getStringExtra(RTSP_URL)
             vlcVideoLibrary.play(url)
         }
-
-        Toast.makeText(this, "Start Stream", Toast.LENGTH_LONG).show()
     }
 
     private fun onStopStream() {

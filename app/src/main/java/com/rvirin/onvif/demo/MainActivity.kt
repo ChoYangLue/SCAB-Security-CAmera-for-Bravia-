@@ -1,6 +1,8 @@
 package com.rvirin.onvif.demo
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -29,6 +31,55 @@ class MainActivity : AppCompatActivity(), OnvifListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        loadSettings()
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        loadSettings()
+    }
+
+    override fun onPause() {
+        super.onPause()
+
+        saveSettings()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+        saveSettings()
+    }
+
+    private fun loadSettings() {
+        val dataStore: SharedPreferences = getSharedPreferences("DataStore", Context.MODE_PRIVATE)
+
+        val ipAdressString = dataStore.getString("ipAddress", null)
+        val loginString = dataStore.getString("login", null)
+        val passwordString = dataStore.getString("password", null)
+
+        findViewById<EditText>(R.id.ipAddress).setText(ipAdressString, TextView.BufferType.NORMAL)
+        findViewById<EditText>(R.id.login).setText(loginString, TextView.BufferType.NORMAL)
+        findViewById<EditText>(R.id.password).setText(passwordString, TextView.BufferType.NORMAL)
+    }
+
+    private fun saveSettings() {
+        val dataStore: SharedPreferences = getSharedPreferences("DataStore", Context.MODE_PRIVATE)
+
+        // get the information type by the user to create the Onvif device
+        val ipAddress = (findViewById<EditText>(R.id.ipAddress)).text.toString()
+        val login = (findViewById<EditText>(R.id.login)).text.toString()
+        val password = (findViewById<EditText>(R.id.password)).text.toString()
+
+        val editor = dataStore.edit()
+        editor.putString("ipAddress", ipAddress)
+        editor.putString("login", login)
+        editor.putString("password", password)
+
+        editor.commit()
+        //editor.apply()
     }
 
     override fun requestPerformed(response: OnvifResponse) {
