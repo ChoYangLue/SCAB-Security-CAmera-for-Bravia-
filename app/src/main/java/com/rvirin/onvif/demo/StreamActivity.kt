@@ -13,7 +13,7 @@ import com.rvirin.onvif.R
 /**
  * This activity helps us to show the live stream of an ONVIF camera thanks to VLC library.
  */
-class StreamActivity : AppCompatActivity(), VlcListener, View.OnClickListener {
+class StreamActivity : AppCompatActivity(), VlcListener{
 
 
     private var vlcVideoLibrary: VlcVideoLibrary? = null
@@ -23,9 +23,19 @@ class StreamActivity : AppCompatActivity(), VlcListener, View.OnClickListener {
         setContentView(R.layout.activity_stream)
 
         val surfaceView = findViewById<SurfaceView>(R.id.surfaceView)
-        val bStartStop = findViewById<Button>(R.id.b_start_stop)
-        bStartStop.setOnClickListener(this)
         vlcVideoLibrary = VlcVideoLibrary(this, this, surfaceView)
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        onStartStream()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+        onStopStream()
     }
 
     /**
@@ -39,24 +49,36 @@ class StreamActivity : AppCompatActivity(), VlcListener, View.OnClickListener {
      * Called by VLC library when an error occured (most of the time, a problem in the URI)
      */
     override fun onError() {
-        Toast.makeText(this, "Error, make sure your endpoint is correct", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "[VLC] make sure your endpoint is correct", Toast.LENGTH_SHORT).show()
         vlcVideoLibrary?.stop()
     }
 
-
-    override fun onClick(v: View?) {
-
+    private fun onStartStream() {
         vlcVideoLibrary?.let { vlcVideoLibrary ->
-
-            if (!vlcVideoLibrary.isPlaying) {
-                val url = intent.getStringExtra(RTSP_URL)
-                vlcVideoLibrary.play(url)
-
-            } else {
-                vlcVideoLibrary.stop()
-
+            if (vlcVideoLibrary.isPlaying) {
+                Toast.makeText(this, "[VLC] stream is already started.", Toast.LENGTH_LONG).show()
+                return
             }
+
+            val url = intent.getStringExtra(RTSP_URL)
+            vlcVideoLibrary.play(url)
         }
+
+        Toast.makeText(this, "Start Stream", Toast.LENGTH_LONG).show()
     }
+
+    private fun onStopStream() {
+        vlcVideoLibrary?.let { vlcVideoLibrary ->
+            if (!vlcVideoLibrary.isPlaying) {
+                Toast.makeText(this, "[VLC] stream is already stoped.", Toast.LENGTH_LONG).show()
+                return
+            }
+
+            vlcVideoLibrary.stop()
+        }
+
+        Toast.makeText(this, "Stop Stream", Toast.LENGTH_LONG).show()
+    }
+
 }
 
