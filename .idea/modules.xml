@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ONVIFCameraAndroid.iml" filepath="$PROJECT_DIR$/ONVIFCameraAndroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PlayCam.iml" filepath="$PROJECT_DIR$/.idea/modules/PlayCam.iml" group="PlayCam" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/PlayCam-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/PlayCam-app.iml" group="PlayCam/app" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/onvifcamera/com.rvirin.onvif-onvifcamera.iml" filepath="$PROJECT_DIR$/.idea/modules/onvifcamera/com.rvirin.onvif-onvifcamera.iml" group="PlayCam/onvifcamera" />
+      <module fileurl="file://$PROJECT_DIR$/onvifcamera/onvifcamera.iml" filepath="$PROJECT_DIR$/onvifcamera/onvifcamera.iml" />
+    </modules>
+  </component>
+</project>
