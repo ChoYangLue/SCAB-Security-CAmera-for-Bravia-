@@ -152,7 +152,7 @@ class MainActivity : AppCompatActivity(), OnvifListener {
                     login.isNotEmpty() &&
                     password.isNotEmpty()) {
 
-                // Create ONVIF device with user inputs and retrieve camera informations
+                // Create ONVIF device with user inputs and retrieve camera information's
                 currentDevice = OnvifDevice(ipAddress, login, password)
                 currentDevice.listener = this
                 currentDevice.getServices()

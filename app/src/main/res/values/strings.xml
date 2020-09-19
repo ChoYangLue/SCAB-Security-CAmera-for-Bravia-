@@ -5,7 +5,7 @@
     <string name="getting_profiles">Getting profiles…</string>
     <string name="getting_stream_uri">Getting streaming URI…</string>
     <string name="Play">Play Stream</string>
-    <string name="ip_address">IP Address</string>
+    <string name="ip_address">IP Address:Port</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
 
