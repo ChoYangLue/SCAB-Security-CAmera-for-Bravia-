@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">ONVIFCamera-Android</string>
-    <string name="start_player">Start Player</string>
+    <string name="app_name">PlayCam for BRAVIA</string>
     <string name="Connect">Connect to camera</string>
     <string name="not_connected">No camera connected</string>
     <string name="getting_profiles">Getting profiles…</string>
