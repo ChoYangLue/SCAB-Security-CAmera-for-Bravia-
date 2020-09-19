@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.rvirin.onvif">
+    package="com.sony.onvif">
 
     <uses-feature
         android:name="android.software.leanback"
@@ -17,14 +17,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name="com.rvirin.onvif.demo.MainActivity">
+        <activity android:name="com.sony.onvif.bravia.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.rvirin.onvif.demo.StreamActivity"></activity>
+        <activity android:name="com.sony.onvif.bravia.StreamActivity"></activity>
     </application>
 
 </manifest>

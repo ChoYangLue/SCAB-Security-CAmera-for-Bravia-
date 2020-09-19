@@ -1,4 +1,4 @@
-package com.rvirin.onvif.onvifcamera
+package com.sony.onvif.onvifcamera
 
 import org.xmlpull.v1.XmlPullParser
 import org.xmlpull.v1.XmlPullParserException
@@ -6,9 +6,9 @@ import org.xmlpull.v1.XmlPullParserFactory
 import java.io.IOException
 import java.io.StringReader
 
-import com.rvirin.onvif.onvifcamera.OnvifRequest.Type.GetDeviceInformation
-import com.rvirin.onvif.onvifcamera.OnvifRequest.Type.GetProfiles
-import com.rvirin.onvif.onvifcamera.OnvifRequest.Type.GetStreamURI
+import com.sony.onvif.onvifcamera.OnvifRequest.Type.GetDeviceInformation
+import com.sony.onvif.onvifcamera.OnvifRequest.Type.GetProfiles
+import com.sony.onvif.onvifcamera.OnvifRequest.Type.GetStreamURI
 import java.net.MalformedURLException
 import java.net.URL
 

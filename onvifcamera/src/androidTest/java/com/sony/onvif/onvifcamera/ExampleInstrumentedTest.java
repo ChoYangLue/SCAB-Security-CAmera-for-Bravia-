@@ -1,4 +1,4 @@
-package com.rvirin.onvif.onvifcamera;
+package com.sony.onvif.onvifcamera;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

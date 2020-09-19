@@ -1,14 +1,12 @@
-package com.rvirin.onvif.demo
+package com.sony.onvif.bravia
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.SurfaceView
-import android.view.View
-import android.widget.Button
 import android.widget.Toast
 import com.pedro.vlc.VlcListener
 import com.pedro.vlc.VlcVideoLibrary
-import com.rvirin.onvif.R
+import com.sony.onvif.R
 
 /**
  * This activity helps us to show the live stream of an ONVIF camera thanks to VLC library.

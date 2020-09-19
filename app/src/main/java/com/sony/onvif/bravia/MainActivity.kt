@@ -1,4 +1,4 @@
-package com.rvirin.onvif.demo
+package com.sony.onvif.bravia
 
 import android.content.Context
 import android.content.Intent
@@ -10,13 +10,13 @@ import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import com.rvirin.onvif.R
-import com.rvirin.onvif.onvifcamera.*
+import com.sony.onvif.R
+import com.sony.onvif.onvifcamera.*
 
-import com.rvirin.onvif.onvifcamera.OnvifRequest.Type.GetStreamURI
-import com.rvirin.onvif.onvifcamera.OnvifRequest.Type.GetProfiles
-import com.rvirin.onvif.onvifcamera.OnvifRequest.Type.GetDeviceInformation
-import com.rvirin.onvif.onvifcamera.OnvifRequest.Type.GetServices
+import com.sony.onvif.onvifcamera.OnvifRequest.Type.GetStreamURI
+import com.sony.onvif.onvifcamera.OnvifRequest.Type.GetProfiles
+import com.sony.onvif.onvifcamera.OnvifRequest.Type.GetDeviceInformation
+import com.sony.onvif.onvifcamera.OnvifRequest.Type.GetServices
 
 const val RTSP_URL = "com.rvirin.onvif.onvifcamera.demo.RTSP_URL"
 

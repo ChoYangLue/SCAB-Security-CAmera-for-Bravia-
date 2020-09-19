@@ -1,4 +1,4 @@
-package com.rvirin.onvif.demo
+package com.sony.onvif.bravia
 
 import org.junit.Test
 

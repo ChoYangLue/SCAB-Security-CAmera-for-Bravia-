@@ -1,17 +1,17 @@
-package com.rvirin.onvif.onvifcamera
+package com.sony.onvif.onvifcamera
 
 
 import android.os.AsyncTask
 import android.util.Log
-import com.rvirin.onvif.onvifcamera.OnvifDeviceInformation.Companion.deviceInformationCommand
-import com.rvirin.onvif.onvifcamera.OnvifDeviceInformation.Companion.deviceInformationToString
-import com.rvirin.onvif.onvifcamera.OnvifDeviceInformation.Companion.parseDeviceInformationResponse
-import com.rvirin.onvif.onvifcamera.OnvifMediaProfiles.Companion.getProfilesCommand
-import com.rvirin.onvif.onvifcamera.OnvifMediaStreamURI.Companion.getStreamURICommand
-import com.rvirin.onvif.onvifcamera.OnvifMediaStreamURI.Companion.parseStreamURIXML
-import com.rvirin.onvif.onvifcamera.OnvifServices.Companion.servicesCommand
-import com.rvirin.onvif.onvifcamera.OnvifXMLBuilder.envelopeEnd
-import com.rvirin.onvif.onvifcamera.OnvifXMLBuilder.soapHeader
+import com.sony.onvif.onvifcamera.OnvifDeviceInformation.Companion.deviceInformationCommand
+import com.sony.onvif.onvifcamera.OnvifDeviceInformation.Companion.deviceInformationToString
+import com.sony.onvif.onvifcamera.OnvifDeviceInformation.Companion.parseDeviceInformationResponse
+import com.sony.onvif.onvifcamera.OnvifMediaProfiles.Companion.getProfilesCommand
+import com.sony.onvif.onvifcamera.OnvifMediaStreamURI.Companion.getStreamURICommand
+import com.sony.onvif.onvifcamera.OnvifMediaStreamURI.Companion.parseStreamURIXML
+import com.sony.onvif.onvifcamera.OnvifServices.Companion.servicesCommand
+import com.sony.onvif.onvifcamera.OnvifXMLBuilder.envelopeEnd
+import com.sony.onvif.onvifcamera.OnvifXMLBuilder.soapHeader
 import okhttp3.MediaType
 import okhttp3.OkHttpClient
 import okhttp3.Request

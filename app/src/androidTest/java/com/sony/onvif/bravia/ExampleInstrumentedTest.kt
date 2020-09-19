@@ -1,4 +1,4 @@
-package com.rvirin.onvif.demo
+package com.sony.onvif.bravia
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
