@@ -1,6 +1,7 @@
-# PlayCam for BRAVIA
+# SCAB(Security CAmera for Bravia)
 **This is not an official SONY application.**
 It is possible to stream video from surveillance cameras and other IP cameras that support ONVIF.
+Security camera for BRAVIA
 
 # Operating Environment
 Android TV (for example Sony BRAVIA)
